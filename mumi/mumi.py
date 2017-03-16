@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import threading
-import Queue
+from multiprocessing import Queue
 import traceback
 from ptt_agent import PttIo
 from push_list_gen import push_list_from_url, push_list_from_clipboard

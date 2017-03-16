@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from Tkinter import *
-import ScrolledText
-import tkMessageBox
+from tkinter import *
+import tkinter.scrolledtext
+from tkinter import messagebox as tkMessageBox
 
 
 def to_int(s):

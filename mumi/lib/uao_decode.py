@@ -7,26 +7,24 @@ class Codec(codecs.Codec):
         pass
 
     def decode(self,input,errors='strict'):
-  	unistr = u''
-	ptr = 0
-	
-	input_len = len(input)	
-	
-	while input_len > ptr:
-		try :
-			hex = input[ptr:ptr+2]
-			mapkey = struct.unpack('!H', hex)[0]
-			uni = unichr(decoding_map[mapkey])
-			unistr += uni
-			ptr += 2
-		except:
-			hex = input[ptr]
-			val = struct.unpack('!B', hex)[0]
-			uni = unichr(val)
-			unistr += uni
-			ptr += 1
-		
-	return unistr, len(unistr)
+        unistr = u''
+        ptr = 0
+        input_len = len(input)
+        while input_len > ptr:
+            try :
+                hex = input[ptr:ptr+2]
+                mapkey = struct.unpack('!H', hex)[0]
+                uni = unichr(decoding_map[mapkey])
+                unistr += uni
+                ptr += 2
+            except:
+                hex = input[ptr]
+                val = struct.unpack('!B', hex)[0]
+                uni = unichr(val)
+                unistr += uni
+                ptr += 1
+
+        return unistr, len(unistr)
 
 class IncrementalEncoder(codecs.IncrementalEncoder):
     pass

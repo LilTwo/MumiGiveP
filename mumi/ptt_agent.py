@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-import StringIO
+from io import StringIO
 import telnetlib
 from time import sleep
 from lib import uao_decode

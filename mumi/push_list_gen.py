@@ -5,7 +5,7 @@ import re
 import requests
 import pyperclip
 
-from HTMLParser import HTMLParser
+from html.parser import HTMLParser
 
 
 def r18cookie(res):
@@ -73,7 +73,7 @@ class Recorder(object):
 
     def printout(self):
         for p in self.push_list:
-            print str(p['push']) + ' : ' + p['id']
+            print (str(p['push']) + ' : ' + p['id'])
 
 
 def push_list_from_url(url):
