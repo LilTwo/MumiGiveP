@@ -61,7 +61,7 @@ For crawling PTT website
 [https://github.com/kennethreitz/requests](https://github.com/kennethreitz/requests)
 
 ## TODO
-1. 貼上推文分析
+<b>1. 貼上推文分析</b>
 1. 稅前稅後
 1. 推文內容條件
 1. SSH 連線
